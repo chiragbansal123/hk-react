@@ -17,7 +17,7 @@ function Logout({ isUserClicked, setIsUserClicked }) {
   async function handleUserLogout() {
     console.log(email);
     try {
-      const { data } = await axios.post("http://localhost:8000/logout", {
+      const { data } = await axios.post(https://hk-backend-zeta.vercel.app/logout", {
         email: email,
       });
     } catch (error) {
