@@ -9,7 +9,7 @@ function MonthStock() {
     const navigate=useNavigate();
   async function func() {
     // console.log(state);
-    const {data}=await axios.get(`http://localhost:8000/getThisMonthInvoice/${state.user.worksAt}`);
+    const {data}=await axios.get(`https://hk-backend-zeta.vercel.app/getThisMonthInvoice/${state.user.worksAt}`);
     setmonthlyStock(data);
     
   }
