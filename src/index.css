@@ -1,0 +1,1674 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.App {
+  display: flex;
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.header {
+  position: fixed;
+  background-color: black;
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  /* flex-direction: row; */
+  align-items: center; /* top to bottom movement */
+  justify-content: center; /* left to right movement */
+  font-size: 15px;
+  font-weight: bold;
+  /* font-family: "Times  New Roman", Times, serif; */
+  letter-spacing: 0.5px;
+}
+
+.header a {
+  color: white;
+}
+
+.header div {
+  /* position: absolute; */
+
+  /* margin-left: 85%; */
+}
+
+.header-user-cart {
+  position: absolute;
+  margin-left: 80%;
+}
+
+#headerUserIcon {
+  /* position: absolute; */
+  /* margin-right: 5%; */
+}
+
+#headerUserIcon img {
+  height: 30px;
+}
+
+#headerUserIcon:hover {
+  cursor: pointer;
+}
+
+.logout {
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.5px;
+  background-color: rgb(255, 255, 255);
+  height: 100px;
+  width: 160px;
+  border: 1px solid rgb(214, 214, 214);
+  border-radius: 3px;
+  margin-top: 140px;
+  margin-left: 80%;
+  box-shadow: 1px 0px 10px rgb(110, 110, 110);
+}
+
+.logout .logout-button {
+  /* position: absolute; */
+  background-color: rgb(0, 0, 0);
+  color: white;
+  width: 80px;
+  height: 15px;
+  font-size: 13px;
+  border-radius: 3px;
+  text-align: center;
+  padding: 15px;
+  margin-left: 25px;
+  margin-top: 15px;
+}
+
+.logout .logout-button:hover {
+  cursor: pointer;
+}
+
+.header #cartIcon {
+  background-color: rgb(143, 69, 69);
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 90%;
+  background-image: linear-gradient(
+    320deg,
+    rgb(128, 128, 128),
+    rgb(255, 255, 255)
+  );
+}
+
+.header #cartIcon img {
+  /* background-color: white; */
+  /* position: absolute; */
+
+  margin-top: 6px;
+  margin-left: 4px;
+  height: 20px;
+}
+
+.header #cartIcon:hover {
+  cursor: pointer;
+}
+
+.error {
+  display: flex;
+  justify-content: center;
+  color: rgb(255, 0, 0);
+  font-size: 14px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.Login-Register-Bar {
+  /* background-color: red; */
+  /* font-family: "Times New Roman", Times, serif; */
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  height: 50px;
+  width: 94%;
+  margin-top: 70px;
+  margin-bottom: 30px;
+  margin-left: 2px;
+  /* border-bottom: 1px solid lightgrey; */
+}
+
+.Login-Register-Bar span {
+  /* width: 100%; */
+  font-size: 15px;
+  font-weight: bold;
+  /* padding-left: 110px;
+  padding-top: 10px;
+  padding-bottom: 10px; */
+  /* background-color: lightgrey; */
+  /* margin-left: 105px; */
+}
+
+/* .Login-Register-Bar span:hover {
+  cursor: pointer;
+  font-weight: bold;
+} */
+
+.Login-Register-Bar span:visited {
+  /* border-bottom: 1px solid black; */
+  font-weight: bold;
+}
+
+.form {
+  /* display: block; */
+  /* background-color: grey; */
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+input {
+  height: 22px;
+  width: 250px;
+  margin: 10px;
+  padding: 10px;
+  /* color: black; */
+  border: solid 1px rgb(0, 0, 0);
+  /* border-radius: 5px; */
+}
+
+input::placeholder {
+  color: rgb(0, 0, 0);
+  /* padding-top: 10px; */
+  font-size: 15px;
+  font-family: "Times New Roman", Times, serif;
+  letter-spacing: 1px;
+}
+
+input:hover {
+  border: 1px solid rgb(179, 179, 179);
+}
+
+/* input:hover::placeholder {
+  color: rgb(179, 179, 179);
+} */
+
+input:focus {
+  outline: none;
+  /* color: rgb(179, 179, 179) */
+}
+
+input:focus::placeholder {
+  font-size: 9px;
+  transform: translateY(-150%);
+}
+
+.Password div {
+  /* position: absolute; */
+  margin: -48px 0px 25px 200px;
+  height: 15px;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 10px;
+  /* font-family: "Times New Roman", Times, serif; */
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.Password div:hover {
+  cursor: pointer;
+}
+
+.checkboxFlex {
+  display: flex;
+  height: 30px;
+  width: 135px;
+  margin-left: 10px;
+  margin-top: 10px;
+  /* margin-bottom: 8px; */
+  /* background-color: chartreuse; */
+}
+
+/* .checkboxFlex input[type="checkbox"] {
+  visibility: hidden;
+} */
+
+.checkboxFlex input {
+  margin-left: 0px;
+  margin-top: 5px;
+  width: 15px;
+}
+
+.checkboxFlex a {
+  text-decoration: underline;
+  font-weight: normal;
+  /* font-family: "Times New Roman", Times, serif; */
+}
+
+/* .checkbox {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  margin-top: -37.5px;
+  margin-left: 0px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+} */
+
+/* .checkboxFlex div:hover input ~ .checkbox {
+  background-color: rgb(240, 240, 240);
+} */
+
+/* .checkboxFlex div:active input ~ .checkbox {
+  background-color: rgb(0, 0, 0);
+} */
+
+/* .checkboxFlex div input:after ~ .checkbox {
+  content: "";
+  position: absolute;
+  display: none;
+  background-color: chartreuse;
+} */
+
+/* .checkboxFlex input:checked ~ .checkbox {
+  display: block;
+} */
+
+/* .checkboxFlex .checkbox:after {
+  left: 80px;
+  bottom: 5px;
+  width: 6px;
+  height: 12px;
+  border: solid rgb(0, 0, 0);
+  border-width: 0 4px 4px 0;
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: blue;
+} */
+
+/* .login-page .submit-button {
+  background-color: white;
+}
+
+.login-page .submit-button:hover {
+  cursor: cursor;
+} */
+
+button {
+  /* position: absolute; */
+  height: 45px;
+  width: 270px;
+  margin-top: 20px;
+  margin-left: 10px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  /* font-family: "Times New Roman", Times, serif; */
+  /* border: solid 1px black; */
+  letter-spacing: 1px;
+  font-size: 15px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.719);
+  border: 2px solid black;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+.submit-button {
+  /* height: 15px; */
+  width: 200px;
+  margin-top: 35px;
+  margin-left: 10px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 15px;
+  /* font-family: "Times New Roman", Times, serif; */
+  /* font-weight: bold; */
+  /* border: solid 1px rgb(255, 255, 255); */
+  /* border-radius: 5px; */
+  /* letter-spacing: 1px; */
+  font-size: 15px;
+}
+
+.submit-button:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.719);
+  color: rgb(0, 0, 0);
+  border: 2px solid black;
+  font-weight: bold;
+}
+
+.tnc {
+  /* position: absolute; */
+  margin-top: 7px;
+  margin-left: 0px;
+  font-size: 13px;
+}
+
+.tnc:hover {
+  cursor: pointer;
+  /* font-weight: normal; */
+}
+
+.Tnc {
+  /* position: absolute; */
+  position: fixed;
+  height: 88%;
+  width: 100%;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(138, 138, 138, 0.26);
+}
+
+.Tnc .content-box {
+  /* position: absolute; */
+  position: fixed;
+  height: 400px;
+  width: 300px;
+  margin-top: -30px;
+  display: flex;
+  justify-content: start;
+  background-color: white;
+  text-align: center;
+}
+
+.Tnc .content-box p {
+  height: 300px;
+  width: 270px;
+  margin-top: 15px;
+  /* background-color: wheat; */
+  border: 1px solid rgb(235, 235, 235);
+  overflow-y: scroll;
+}
+
+.Tnc .submit-button {
+  position: relative;
+  /* justify-content: end; */
+  width: 200px;
+  margin-left: 0px;
+  margin-top: 0px;
+}
+
+.Tnc .submit-button:hover {
+  border: 2px solid rgb(0, 0, 0);
+}
+
+/* button:active {
+  color: white;
+} */
+
+/* Footer Styles */
+
+.footer {
+  position: fixed;
+  width: 100vw;
+  height: 60px;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center; /* top to bottom movement */
+  justify-content: center; /* left to right movement */
+  background-color: rgb(211, 211, 211);
+  background-image: linear-gradient(180deg, rgb(173, 173, 173), white);
+}
+
+.footer span {
+  /* font-family: "Times New Roman", Times, serif; */
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.footer-left-span {
+  margin-right: 50vw;
+}
+
+.footer-mid-span {
+  position: fixed;
+  /* display: flex; */
+  /* align-items: center; top to bottom movement */
+  /* justify-content: center; left to right movement */
+}
+
+a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.header a:hover {
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  margin-top: 60px;
+  height: 717px;
+  width: 100%;
+  /* background-color: bisque; */
+}
+
+.profile .dashboard {
+  display: flex;
+  flex-direction: column;
+  background-color: aqua;
+  width: 95%;
+  margin-top: 2.5%;
+  height: 60%;
+  /* border: 1px solid black; */
+}
+
+.dashboard .row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 50%;
+  background-color: rgb(255, 255, 255);
+  /* border: 1px solid black; */
+}
+
+.row .dashboard-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33%;
+  height: 93%;
+  color: rgb(0, 0, 0);
+  /* border-radius: 20px; */
+  background-color: rgb(236, 236, 236);
+  box-shadow: 5px 0px 10px rgb(70, 70, 70);
+}
+
+.row .dashboard-item:hover {
+  cursor: pointer;
+  width: 32.5%;
+  height: 92.5%;
+}
+
+.row #todaySales {
+  color: rgb(255, 255, 255);
+  background-image: linear-gradient(180deg, rgb(0, 0, 0), rgb(0, 255, 85));
+}
+
+.row #lowStock {
+  color: rgb(255, 255, 255);
+  background-image: linear-gradient(180deg, rgb(0, 0, 0), rgb(253, 2, 2));
+
+  /* font-weight: bold; */
+}
+
+.row #outOfStock {
+  color: rgb(255, 255, 255);
+  background-image: linear-gradient(180deg, rgb(0, 0, 0), rgb(233, 233, 233));
+}
+
+.dashboard-item div {
+  font-size: 90px;
+  font-weight: bold;
+}
+
+.profile #headerUserIcon img {
+  height: 40px;
+  margin-top: 50px;
+  margin-bottom: 5px;
+}
+
+.profile #orders {
+  height: 20px;
+  padding: 7px 5px 0px 5px;
+  font-size: 11px;
+  font-weight: bold;
+  border: 1px solid black;
+  /* border-radius: 3px; */
+  margin-top: 30px;
+}
+
+.profile #customers {
+  height: 20px;
+  padding: 7px 5px 0px 5px;
+  font-size: 11px;
+  font-weight: bold;
+  border: 1px solid black;
+  margin-top: 20px;
+}
+
+.profile #orders:hover {
+  cursor: pointer;
+}
+
+.profile #customers {
+  cursor: pointer;
+}
+
+/* #profileSection { */
+/* display: flex; */
+/* flex-direction: column; */
+/* justify-content: center; */
+/* align-items: center; */
+/* height: 90%; */
+
+/* background-color: bisque; */
+/* } */
+
+/* HomePage styles */
+
+.HomePage {
+  /* position: absolute; */
+  /* margin-top: 65px; */
+  /* background-color: lightpink; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 150%;
+  margin-top: 60px;
+  margin-bottom: 70px;
+  /* background-color: rgb(103, 204, 170); */
+}
+
+.welcome-block {
+  /* margin-left: 25%;
+  margin-top: 30%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+  height: 520px;
+  font-size: 25px;
+  font-weight: bold;
+  /* color: hsl(0, 0%, 0%); */
+  /* background-color: aqua; */
+}
+
+.welcome-block h1 {
+  width: 230px;
+  height: 100%;
+  /* background-color: beige; */
+}
+
+.welcome-block .submit-button {
+  margin-left: 4px;
+  height: 50px;
+  width: 200px;
+}
+
+.Search-Bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  margin-top: -5px;
+  /* margin-left: 100px; */
+}
+
+.Search-Bar input {
+  height: 20px;
+}
+
+.Search-Bar span {
+  margin-left: -87px;
+  background-color: rgb(0, 0, 0);
+  padding: 12px;
+  color: #dddddd;
+  font-size: 12px;
+  font-weight: bold;
+  /* letter-spacing: 1px; */
+}
+.Search-Bar input:hover {
+  background-color: rgb(252, 252, 252);
+  border: 1px solid black;
+}
+
+.Search-Bar input:focus {
+  background-color: rgb(252, 252, 252);
+}
+
+.Search-Bar span:hover {
+  cursor: pointer;
+}
+
+table {
+  display: inline-block;
+  /* font-family: "Times New Roman", Times, serif; */
+  border-collapse: collapse;
+  border: 1px solid rgb(219, 219, 219);
+  width: 90%;
+  overflow: scroll;
+  /* box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.479); */
+}
+
+thead {
+  /* position: relative; */
+  display: table;
+  width: 100%;
+
+  /* font-size: 14px; */
+
+  /* border: 1px solid #adadad; */
+  /* position: sticky; */
+}
+
+.HomePage tbody {
+  display: block; /* to enable vertical scrolling */
+  height: 459px;
+  /* width: 100%; */
+  overflow-y: scroll; /* keeps the scrollbar even if it doesn't need it; display purpose */
+}
+
+tr,
+.row {
+  display: table;
+  /* display purpose; th's border */
+  width: 100%;
+  height: 50px;
+  /* box-sizing: border-box; */
+  /* because of the border (Chrome needs this line, but not FF) */
+}
+
+.low-stock-row {
+  display: table;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  /* background-color: rgb(255, 0, 0); */
+  height: 50px;
+  background-image: linear-gradient(
+    125deg,
+    rgba(255, 255, 255),
+    rgb(255, 0, 0)
+  );
+}
+
+.low-stock-row .item-name:hover {
+  cursor: pointer;
+}
+
+.low-stock-row td {
+  /* padding-top: 10px; */
+  /* height: 45px; */
+}
+
+td {
+  width: 10%;
+  text-align: center;
+  border: 1px solid #cecece;
+  font-size: 14px;
+  word-break: break-all;
+  /* height: 45px; */
+}
+
+th {
+  background-color: #dddddd;
+  width: 10%;
+  text-align: center;
+  border: 1px solid #cecece;
+  font-size: 14px;
+  height: 50px;
+  background-image: linear-gradient(180deg, rgb(173, 173, 173), white);
+}
+
+td #quantity {
+  /* display: inline-block; */
+  margin-left: 5px;
+  margin-bottom: 2px;
+  height: 6px;
+  /* background-color: aqua; */
+}
+
+td #quantity:hover {
+  cursor: pointer;
+}
+
+.item-name {
+  width: 25%;
+  font-weight: bold;
+  /* letter-spacing: 0.5px; */
+
+  /* padding: 0px; */
+  /* background-color: aqua; */
+}
+
+/* .item-name #quantity img {
+  margin: 0px 0px 0px 5px;
+  height: 14px;
+} */
+
+/* .salt-field {
+  width: 30%; */
+/* overflow-x: hidden; */
+/* -webkit-hyphens: auto; */
+/* -moz-hyphens: auto; */
+/* -ms-hyphens: auto; */
+/* hyphens: auto; */
+/* } */
+
+.orders tr:nth-child(even) {
+  background-color: #f5f5f5;
+  background-image: linear-gradient(125deg, white, rgb(173, 173, 173), white);
+}
+
+.end-customers tr:nth-child(even) {
+  background-color: #f5f5f5;
+  background-image: linear-gradient(125deg, white, rgb(173, 173, 173), white);
+}
+
+/* #lessThan5 {
+  color: red;
+} */
+
+.cartIcon {
+  /* padding-top: 15px; */
+}
+
+.cartIcon img {
+  margin-top: 10px;
+  /* margin-bottom: -10px; */
+  height: 21px;
+}
+
+.HomePage .cartIcon img:hover {
+  cursor: pointer;
+  height: 22px;
+}
+
+#goToCartArrow {
+  background-color: rgba(0, 0, 0, 0);
+  width: 11px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 17px;
+  padding: 0px;
+  margin-left: 50%;
+}
+
+#goToCartArrow:hover {
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.HomePage .submit-button {
+  height: 45px;
+  width: 200px;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.confirmation-box {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(63, 63, 63, 0.692);
+  /* border-radius: 40px; */
+  margin-top: 0px;
+}
+
+.confirmation-box .back-to-home-cross-container {
+  position: absolute;
+  margin-left: 260px;
+  margin-bottom: 160px;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.confirmation-box .back-to-home-cross-container:hover {
+  /* box-shadow: black; */
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.confirmation-box #customerName {
+  height: 13px;
+  width: 60%;
+  margin-top: 20px;
+  margin-left: 15%;
+}
+
+.confirmation-box #mobile {
+  height: 13px;
+  width: 60%;
+  margin-top: 0px;
+  margin-left: 15%;
+}
+
+.confirmation-box #email {
+  height: 13px;
+  width: 60%;
+  margin-top: 0px;
+  margin-left: 15%;
+}
+
+.confirmation-box .proceed {
+  /* position: absolute; */
+  margin-top: -10px;
+  margin-left: 10%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  margin-top: 0px;
+  margin-left: 15%;
+  height: 40px;
+  width: 67%;
+}
+
+.back-to-home-cross {
+  height: 18px;
+}
+
+.content-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* font-family: "Times New Roman", Times, serif; */
+  box-shadow: 5px 0px 10px rgb(70, 70, 70);
+  height: 200px;
+  width: 300px;
+  background-color: rgb(235, 235, 235);
+}
+
+.content-box button {
+  width: 200px;
+  margin-left: 0px;
+}
+
+.stock-content-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* font-family: "Times New Roman", Times, serif; */
+  box-shadow: 5px 0px 10px rgb(70, 70, 70);
+  height: 200px;
+  width: 300px;
+  background-color: rgb(235, 235, 235);
+}
+
+.stock-content-box button {
+  width: 200px;
+  margin-bottom: 5px;
+  margin-left: 0px;
+}
+
+.quantity-modification-bar {
+  height: 30px;
+  width: 40%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 4px;
+}
+
+.quantity-modification-bar .decreament,
+.increment {
+  height: 20px;
+  text-align: center;
+  padding: 0px 2px 0px 2px;
+  /* background-image: linear-gradient(
+    180deg,
+    rgb(209, 209, 209),
+    rgb(158, 158, 158)
+  ); */
+  /* padding-top: 4px; */
+}
+
+.quantity-modification-bar .drop-down {
+  width: 100%;
+  display: flex;
+  /* background-color: aqua; */
+}
+
+.quantity-modification-bar select {
+  height: 20px;
+  width: 36%;
+  /* margin-left: 20px; */
+  /* margin-top: 2.45px; */
+  margin-right: 5px;
+  /* display: none; */
+}
+
+.quantity-modification-bar .units {
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  /* padding: 2px 0px 0px 0px; */
+  font-size: 156x;
+  font-weight: bold;
+  margin-top: 1px;
+  margin-right: 5px;
+  /* background-color: rgba(0, 0, 0, 1); */
+}
+
+/* .quantity-modification-bar .units span {
+  margin-top: 10px;
+  padding: 10px;
+} */
+
+.decreament,
+.increment:hover {
+  cursor: pointer;
+}
+
+.quantityModBar {
+  /* background-color: rgb(160, 0, 0); */
+  /* width: 100%; */
+}
+
+.delete-from-cart img {
+  position: absolute;
+  margin-top: -10px;
+  margin-left: 30px;
+  height: 20px;
+}
+
+.delete-from-cart img:hover {
+  cursor: pointer;
+  margin-top: -12px;
+  height: 25px;
+}
+
+.content-box button {
+  /* width: 200px; */
+  margin-top: 30px;
+  margin-left: 0px;
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 60px;
+  /* background-color: aliceblue; */
+}
+
+.cart table {
+  margin-top: 40px;
+}
+
+.cart tbody {
+  display: block; /* to enable vertical scrolling */
+  height: 402px;
+  /* width: 100%; */
+  overflow-y: scroll; /* keeps the scrollbar even if it doesn't need it; display purpose */
+}
+
+.cart tr {
+  /* height: 30px; */
+  padding: 5px;
+}
+
+.cart .cartIcon {
+  /* display: flex;
+  flex-direction: column; */
+  /* height: 100px; */
+}
+
+.cartIcon div {
+  /* padding: 5px; */
+  height: 25px;
+  background-color: rgba(255, 255, 255, 0);
+
+  /* display: flex;
+  justify-self: center;
+  align-items: center; */
+  /* margin-top: 0px; */
+  /* margin-right: -10px; */
+}
+
+.cartIcon .quantity-modification-bar {
+  width: fit-content;
+  height: 20px;
+}
+
+.cart #unitsUpdate {
+  text-align: center;
+  background-color: antiquewhite;
+  width: 80%;
+  margin-left: 10%;
+}
+
+#unitsUpdate:hover {
+  cursor: pointer;
+  padding: 1px;
+}
+
+.HomePage #unitsUpdate img {
+  /* position: absolute; */
+  height: 12px;
+  margin-left: 5px;
+}
+
+.bill-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  /* margin-left: 5%; */
+  width: 90%;
+}
+
+.bill-section button {
+  width: 125px;
+}
+
+.cart .cart-total {
+  display: flex;
+  justify-content: right;
+  margin-top: 30px;
+}
+
+.cart-total div {
+  /* font-family: "Times  New Roman", Times, serif; */
+}
+
+.cart-total div span {
+  font-size: 20px;
+  font-weight: bold;
+  /* font-family: "Times  New Ro
+  
+  man", Times, serif; */
+}
+
+.cart .welcome-block h1 {
+  margin-left: 28px;
+  /* background-color: antiquewhite; */
+}
+
+.add-update-item {
+  margin-top: 60px;
+  width: 100%;
+}
+
+.add-update-item .submit-button {
+  height: 48px;
+  width: 200px;
+  margin-left: 0px;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.add-update-item form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.invoice {
+  /* position: absolute; */
+  height: 200%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgba(63, 63, 63, 0.692); */
+  margin-top: 60px;
+}
+
+#invoiceCapture {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* height: fit-content; */
+  width: 100%;
+  /* width: 100%; */
+  margin-top: 0px;
+  /* margin-left: 10px; */
+  /* background-color: rgb(190, 89, 89); */
+}
+
+.main-invoice {
+  width: 96%;
+  margin: 2%;
+  border: 1px solid black;
+  /* background-color: wheat; */
+}
+
+#invoiceCapture .invoice-part {
+  /* background-color: aliceblue; */
+  margin-left: 15px;
+}
+
+.invoice #invoiceBusinessName {
+  border-bottom: 1px solid black;
+}
+
+.invoice .invoice-top {
+  display: flex;
+  margin-top: -20px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  font-size: 22px;
+  height: 50px;
+  /* border-bottom: 1px solid black; */
+  /* background-color: wheat; */
+}
+
+.invoice-part h4 {
+  /* border-bottom: 1px solid black; */
+}
+
+.invoice .table-content {
+  /* background-color: aquamarine; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 1%;
+}
+
+.invoice table {
+  width: 98%;
+  background-color: rgb(248, 248, 248);
+  border: 0.5px solid black;
+}
+
+.invoice #tableHeader {
+  /* background-image: white; */
+}
+
+.table-content #tableHeader {
+  width: 100%;
+  background-color: aqua;
+}
+
+.invoice th {
+  border: 0px;
+  height: 30px;
+  background-color: white;
+
+  /* border-right: 1px solid black; */
+
+  /* border-top: 1px solid black; */
+}
+
+#tableHeader {
+  background-color: white;
+  border-bottom: 0.5px solid black;
+}
+
+.invoice tr {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  /* border: 1px solid black; */
+  /* height: 25px; */
+}
+
+.invoice td {
+  height: 30px;
+  border: 1px solid white;
+  /* border-right: 1px solid black; */
+  /* border-bottom: 0.01px solid white; */
+  /* width: 100%; */
+}
+
+.invoice tbody {
+  /* width: 100%; */
+  /* height: 302px; */
+  /* height: fit-content; */
+  border: 1px solid black;
+}
+
+.invoice #total {
+  text-align: right;
+  margin-right: 15px;
+}
+
+.Billing-details {
+  display: flex;
+  /* text-align: center; */
+  justify-content: space-between;
+  border-top: 1px solid black;
+  /* border-bottom: 1px solid black; */
+}
+
+.Billing-details div {
+  width: 35%;
+  font-size: 12px;
+  word-wrap: break-word;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.Billing-details div h3 {
+  margin-bottom: 25px;
+  /* text-align: center; */
+}
+
+.Billing-details div h4 {
+  margin-top: -10px;
+  /* text-align: center; */
+}
+
+.Billing-details #billingDate {
+  border-right: 0px;
+}
+
+.invoice-part-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin: 1%;
+  border: 0.5px solid black;
+}
+
+#gst-section {
+  display: flex;
+  /* flex-direction: column; */
+  height: 60px;
+  /* justify-content: center; */
+  /* align-items: center; */
+
+  /* background-color: wheat; */
+  width: 60%;
+}
+
+#gst-section div {
+  /* width: 30%; */
+  margin-left: 7%;
+  /* margin-right: 5%; */
+  /* background-color: wheat; */
+  /* border: 1px solid black; */
+  /* margin-bottom: 0px; */
+}
+
+.share-invoice {
+  height: 150px;
+}
+
+.orders {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: aliceblue; */
+}
+
+.orders tbody {
+  display: block;
+  width: 100%;
+  max-height: 402px;
+  /* background-color: aliceblue; */
+}
+.orders td {
+  font-size: 13px;
+  /* width: 20%; */
+  /* background-color: antiquewhite; */
+}
+
+.orders .item-name {
+  width: 20%;
+}
+
+.orders tbody .item-name:hover {
+  cursor: pointer;
+}
+
+.end-customers {
+  width: 100%;
+  /* margin-top: 60px; */
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: aliceblue; */
+}
+
+.end-customers tbody {
+  display: block;
+  width: 100%;
+  max-height: 502px;
+  /* background-color: rgb(58, 139, 211); */
+}
+.end-customers td {
+  font-size: 13px;
+  /* width: 20%; */
+  /* background-color: antiquewhite; */
+}
+
+.end-customers .item-name {
+  width: 20%;
+}
+.end-customers tbody .item-name:hover {
+  cursor: pointer;
+}
+
+.end-cx {
+  width: 100%;
+  margin-top: 60px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
+
+.end-cx tbody {
+  display: block;
+  width: 100%;
+  max-height: 421px;
+  /* background-color: aliceblue; */
+}
+.end-cx td {
+  font-size: 13px;
+  /* width: 20%; */
+  /* background-color: antiquewhite; */
+}
+
+.end-cx .item-name {
+  width: 20%;
+}
+
+.end-cx tbody .item-name:hover {
+  cursor: pointer;
+}
+
+.low-stock {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: aliceblue; */
+}
+
+.low-stock tbody {
+  display: block;
+  width: 100%;
+  max-height: 402px;
+  /* background-color: aliceblue; */
+}
+.low-stock td {
+  font-size: 13px;
+  /* width: 20%; */
+  /* background-color: antiquewhite; */
+}
+
+.low-stock .item-name {
+  width: 20%;
+}
+
+.low-stock tbody .item-name:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 900px) {
+  .header #cartIcon {
+    margin-left: 70%;
+  }
+
+  .header-user-cart {
+    position: absolute;
+    margin-left: 70%;
+  }
+
+  .logout {
+    margin-left: 70%;
+  }
+
+  .HomePage tbody {
+    height: 407px;
+  }
+
+  .item-name {
+    width: 25%;
+    font-size: 15px;
+  }
+
+  .invoice tbody {
+    /* height: 702px; */
+  }
+
+  .dashboard-item div {
+    font-size: 70px;
+    font-weight: bold;
+  }
+
+  .row .dashboard-item {
+    width: 32%;
+  }
+}
+
+@media only screen and (max-height: 600px) {
+  .item-name {
+    width: 25%;
+    /* font-size: 15px; */
+  }
+
+  .HomePage tbody {
+    height: 402px;
+  }
+
+  tbody {
+    height: 256px;
+  }
+
+  td {
+    width: 10%;
+    /* padding: 5px; */
+    text-align: center;
+    border: 1px solid #cecece;
+    font-size: 14px;
+  }
+
+  th {
+    height: 20px;
+  }
+
+  .invoice tbody {
+    /* height: 702px; */
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .header-user-cart {
+    position: absolute;
+    margin-left: 70%;
+  }
+
+  /* .header div {
+    margin-left: 70%;
+  } */
+  #headerUserIcon {
+    /* position: absolute; */
+    /* margin-left: 75%; */
+  }
+
+  .header #cartIcon {
+    margin-left: 50%;
+  }
+
+  .logout {
+    margin-left: 65%;
+  }
+
+  .Search-Bar {
+    display: flex;
+
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+
+    /* background-color: lightgrey; */
+  }
+
+  .Search-Bar input {
+    height: 15px;
+    width: 241px;
+    /* position: fixed; */
+    /* overflow: scroll; */
+    /* justify-content: center; */
+    font-size: 12px;
+    /* margin-top: 0%; */
+  }
+
+  .Search-Bar input::placeholder {
+    font-size: 12px;
+  }
+
+  .Search-Bar input:focus::placeholder {
+    font-size: 9px;
+    transform: translateY(-130%);
+  }
+
+  .Search-Bar span {
+    /* position: fixed; */
+    margin-left: -77.5px;
+    background-color: rgb(0, 0, 0);
+    padding: 11.4px;
+    color: #dddddd;
+    font-size: 10px;
+  }
+
+  table {
+    display: inline-block;
+    /* font-family: "Times New Roman", Tim
+    es, serif; */
+    border-collapse: collapse;
+
+    width: 90%;
+    overflow: scroll;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.479);
+  }
+  .HomePage tbody {
+    height: 406px;
+  }
+
+  th {
+    width: 10%;
+    /* height: 40px; */
+    /* font-size: 13px; */
+  }
+
+  td {
+    width: 10%;
+    /* height: 40px; */
+    /* font-size: 14px; */
+  }
+
+  .item-name {
+    font-size: 14px;
+    width: 25%;
+  }
+
+  .item-name #quantity img {
+    margin: 0px 0px 0px 5px;
+    height: 12px;
+  }
+
+  .cartIcon img {
+    /* margin-top: 2px; */
+    height: 20px;
+  }
+
+  .invoice .invoice-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+  }
+
+  .dashboard-item div {
+    font-size: 50px;
+    font-weight: bold;
+  }
+
+  .row .dashboard-item {
+    width: 32%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  table {
+    display: inline-block;
+    /* font-family: "Times New Roman", Times, serif; */
+    border-collapse: collapse;
+
+    width: 390px;
+    /* margin-left: 100px; */
+    overflow: scroll;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.479);
+  }
+
+  .HomePage tbody {
+    height: 402px;
+  }
+
+  th {
+    /* width: 40%; */
+    /* height: 20px; */
+  }
+
+  .cart tbody {
+    display: block; /* to enable vertical scrolling */
+    height: 402px;
+    /* width: 100%; */
+    overflow-y: scroll; /* keeps the scrollbar even if it doesn't need it; display purpose */
+  }
+
+  .HomePage tbody {
+    display: block; /* to enable vertical scrolling */
+    height: 402px;
+    /* width: 100%; */
+    overflow-y: scroll; /* keeps the scrollbar even if it doesn't need it; display purpose */
+  }
+
+  .invoice .invoice-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+
+  .dashboard-item div {
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
