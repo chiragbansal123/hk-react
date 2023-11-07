@@ -21,7 +21,7 @@ function Orders() {
     // console.log("gere");
     setInvoices(
       await axios.get(
-        `http://localhost:8000/getAllInvoice/${state.user.worksAt}`
+        `https://hk-backend-zeta.vercel.app/getAllInvoice/${state.user.worksAt}`
       )
     );
     // console.log(invoices);
@@ -30,7 +30,7 @@ function Orders() {
   async function getInvoices(id) {
     setInvoices(
       await axios.get(
-        `http://localhost:8000/getTodaysAllInvoice?businessName=${state.user.worksAt}&date=${id}`
+        `https://hk-backend-zeta.vercel.app/getTodaysAllInvoice?businessName=${state.user.worksAt}&date=${id}`
       )
     );
   }
