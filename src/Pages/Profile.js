@@ -92,8 +92,9 @@ function Profile() {
     func();
   }, []);
 
-  return (
+   return (
     <div className="profile">
+      {console.log(totalSales?.data.length)}
       {/* {console.log(todaySales?.data)} */}
       {/* <h1>PROFILE PAGE</h1> */}
 
@@ -108,20 +109,7 @@ function Profile() {
           <div>{isUserIconClicked ? <>{user.email}</> : <>CLicked</>}</div>
         </form>
       )} */}
-        {/* <DatePicker
-        selected={selectedDate}
-        onChange={handleDateChange}
-        dateFormat="MM/dd/yyyy" // Customize the date format
-        disableCalendar={close}
-      />
-      {selectedDate && (
-        <p>Selected Date: {selectedDate.toDateString()}</p>
-      )} */}
-      <span>
-      <input type="date" id="startdate"/>
-      <input type="date" id="enddate"/>
-      <input type="submit" value="search" onClick={handleDateSubmit}></input>
-      </span>
+
       <div className="dashboard">
         <div className="row">
           <div
@@ -129,54 +117,64 @@ function Profile() {
             className="dashboard-item"
             onClick={handleTodaySales}
           >
-            <h3>TODAY SALES</h3>
+            <h4>TODAY SALES</h4>
             <div>{todaySales?.data}</div>
           </div>
-          <div className="dashboard-item" onClick={handleMonthSales}>
-            <h3>THIS MONTH SALES</h3>
+          <div className="dashboard-item" onClick={handleThisMonthSales}>
+            <h4>THIS MONTH SALES</h4>
             <div>{thisMonthSales?.data}</div>
           </div>
-          <div
-            className="dashboard-item"
-            // onClick={handleCustomers}
-          >
-            <h3>PROFIT</h3>
-            <div>
-              {thisMonthSales?.data==0 ? 0 :parseFloat(
-                thisMonthSales?.data.substring(
-                  0,
-                  thisMonthSales?.data.length - 1
-                )
-              ) / 10}
-              {thisMonthSales?.data!=0 && thisMonthSales?.data.charAt(thisMonthSales?.data.length) ==
-              "k" ? (
-                <>k</>
-              ) : (
-                <>L</>
-              )}
-            </div>
+          <div className="dashboard-item" onClick={handleTotalOrders}>
+            <h4>TOTAL ORDERS</h4>
+            <div>{totalSales?.data.length}</div>
           </div>
         </div>
         <div className="row">
-          <div className="dashboard-item" onClick={handleStock}>
-            <h3>STOCK</h3>
-            <div>{state.stock.length}</div>
+          <div className="dashboard-item">
+            <h4>PROFIT</h4>
+            <div>
+              {console.log(
+                thisMonthSales?.data.charAt(thisMonthSales?.data.length - 1)
+              )}
+              {thisMonthSales?.data != 0 &&
+                (
+                  parseFloat(
+                    thisMonthSales?.data.substring(
+                      0,
+                      thisMonthSales?.data.length - 1
+                    )
+                  ) / 10
+                ).toFixed(2)}
+              {thisMonthSales?.data != 0 ? (
+                thisMonthSales?.data.charAt(thisMonthSales?.data.length - 1) ==
+                "k" ? (
+                  <>k</>
+                ) : (
+                  <>L</>
+                )
+              ) : (
+                <>0</>
+              )}
+            </div>
           </div>
           <div
             id="lowStock"
             className="dashboard-item"
             onClick={handleLowStock}
           >
-            <h3>LOW STOCK</h3>
+            <h4>LOW STOCK</h4>
             <div>{lowStock}</div>
           </div>
-          <div id="outOfStock" className="dashboard-item" onClick={outofstock}>
-            <h3>OUT OF STOCK</h3>
+          <div
+            id="outOfStock"
+            className="dashboard-item"
+            onClick={handleOutOfStock}
+          >
+            <h4>OUT OF STOCK</h4>
             <div>{outOfStock}</div>
           </div>
         </div>
       </div>
-      
 
       {/* <div className="profile-bottom">
         <div id="orders">ORDERS</div>
