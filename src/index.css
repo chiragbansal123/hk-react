@@ -510,8 +510,9 @@ a:hover {
 
 .row .dashboard-item:hover {
   cursor: pointer;
-  width: 32.5%;
-  height: 92.5%;
+  /* width: 32.5%; */
+  /* height: 92.5%; */
+  box-shadow: 5px 0px 10px rgb(255, 255, 255);
 }
 
 .row #todaySales {
@@ -716,8 +717,6 @@ tr,
 }
 
 .low-stock-row td {
-  /* padding-top: 10px; */
-  /* height: 45px; */
 }
 
 td {
@@ -957,24 +956,26 @@ td #quantity:hover {
 }
 
 .quantity-modification-bar select {
-  height: 20px;
-  width: 36%;
+  height: 15px;
+  width: 45%;
   /* margin-left: 20px; */
-  /* margin-top: 2.45px; */
-  margin-right: 5px;
+  margin-top: 17px;
+  margin-right: 3px;
   /* display: none; */
 }
 
 .quantity-modification-bar .units {
   width: 100%;
-  height: 20px;
+  height: 10px;
   text-align: center;
-  /* padding: 2px 0px 0px 0px; */
-  font-size: 156x;
+  /* padding: 2px 0px -px 0px; */
+  font-size: 14px;
   font-weight: bold;
-  margin-top: 1px;
-  margin-right: 5px;
-  /* background-color: rgba(0, 0, 0, 1); */
+  /* margin-top: 10px; */
+  margin-right: 3px;
+  margin-left: -7px;
+  border: 0px;
+  background-color: rgba(7, 7, 7, 0);
 }
 
 /* .quantity-modification-bar .units span {
@@ -1202,6 +1203,7 @@ td #quantity:hover {
   width: 98%;
   background-color: rgb(248, 248, 248);
   border: 0.5px solid black;
+  box-shadow: white;
 }
 
 .invoice #tableHeader {
@@ -1326,6 +1328,91 @@ td #quantity:hover {
   /* background-color: aliceblue; */
 }
 
+.orders-filters {
+  display: flex;
+  width: 482px;
+  margin-bottom: 25px;
+  /* flex-grow: 1; */
+  /* margin-left: 10px; */
+  /* background-color: grey; */
+  /* border: 0.4px solid black; */
+}
+
+.orders-filters div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  padding: 10px;
+  /* padding-left: 22px; */
+  font-size: 11px;
+  font-weight: bold;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.orders-filters div:hover {
+  cursor: pointer;
+  /* font-size: 13px; */
+  color: black;
+  background-color: rgb(236, 236, 236);
+}
+
+.today-orders-filters {
+  display: flex;
+  width: 482px;
+  margin-left: 200px;
+  margin-bottom: 25px;
+  flex-grow: 1;
+}
+
+.today-orders-filters div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  padding: 10px;
+  /* padding-left: 22px; */
+  font-size: 11px;
+  font-weight: bold;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.today-orders-filters div:hover {
+  cursor: pointer;
+  /* font-size: 13px; */
+  color: black;
+  background-color: rgb(236, 236, 236);
+}
+
+.filters-icon img {
+  position: absolute;
+  margin-top: -60px;
+  margin-left: 180px;
+  /* background-color: rgb(240, 240, 240); */
+  height: 20px;
+}
+
+.filters-icon img:hover {
+  cursor: pointer;
+}
+
+.range-form {
+  display: flex;
+  margin-top: -20px;
+  width: 500px;
+  justify-content: space-between;
+  /* background-color: blanchedalmond; */
+}
+
+.range-form .submit-button {
+  width: 130px;
+  margin: 10px;
+}
+
 .orders tbody {
   display: block;
   width: 100%;
@@ -1426,6 +1513,22 @@ td #quantity:hover {
   max-height: 402px;
   /* background-color: aliceblue; */
 }
+.low-stock tr {
+  background-image: linear-gradient(
+    125deg,
+    rgba(255, 255, 255),
+    rgb(255, 0, 0)
+  );
+}
+
+.low-stock .out-of-stock {
+  background-image: linear-gradient(
+    125deg,
+    rgba(255, 255, 255),
+    rgb(112, 112, 112)
+  );
+}
+
 .low-stock td {
   font-size: 13px;
   /* width: 20%; */
@@ -1532,7 +1635,6 @@ td #quantity:hover {
 
   .Search-Bar {
     display: flex;
-
     flex-direction: row;
     justify-content: center;
     align-items: center;
