@@ -39,7 +39,7 @@ function LoginPage() {
     // } else {
     // login block
     try {
-      const { data, token } = await axios.post("https://hk-backend-umber.vercel.app//signin", {
+      const { data, token } = await axios.post("https://hk-backend-umber.vercel.app/signin", {
         email: email,
         password: password,
       });
